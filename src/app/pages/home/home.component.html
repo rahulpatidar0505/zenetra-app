@@ -1,0 +1,845 @@
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container hero-content center-content">
+    <div class="hero-slider-flipkart" (mouseenter)="pauseSlider()" (mouseleave)="resumeSlider()">
+      <div class="hero-slide-flipkart" *ngFor="let slide of heroSlides; let i = index" [class.active]="i === currentSlide">
+        <div class="hero-slide-content-flipkart">
+          <div class="hero-left">
+            <h1 class="hero-title">{{ slide.title }}</h1>
+            <p class="hero-subtitle">{{ slide.subtitle }}</p>
+          </div>
+          <div class="hero-right">
+            <img [src]="slide.img" alt="Hero Image" class="hero-img-flipkart" (click)="onSlideClick(slide)" style="cursor:pointer;" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- What is Zenetra Technology Section -->
+<section class="intro-section">
+  <div class="container intro-grid center-content">
+    <div class="intro-left">
+  <h1 class="intro-title">What <span style="color: #013024;">We</span> Offer?</h1>
+  <p class="intro-desc">We are a leading IT services company specializing in Project Development, Online Training, Workshops and Project Support. Empowering businesses and individuals with innovative solutions and expert guidance.</p>
+    </div>
+    <div class="intro-right">
+      <div class="blue-card">
+        <div class="blue-card-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21 21H3m3-7l3-3 3 3 6-6" stroke="#00FFB9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div>
+          <div class="blue-card-title">More <span class="accent">EFFICIENT</span></div>
+          <div class="blue-card-desc">than watching random tutorials</div>
+        </div>
+      </div>
+      <div class="blue-card">
+        <div class="blue-card-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2L4 7l8 5 8-5-8-5zm0 10L4 17l8 5 8-5-8-5z" stroke="#00FFB9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div>
+          <div class="blue-card-title">FASTER results</div>
+          <div class="blue-card-desc">than expensive boot camps</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features Section -->
+<section class="features-section">
+  <div class="features-heading">
+    <h2 class="features-title" style="color: #000;">Unlock Your Potential with <span style="color: #013024;">Zenetra</span></h2>
+    <p class="features-subtitle">Everything you need to learn, practice, and grow — all in one place.</p>
+  </div>
+  <div class="container features-grid center-content">
+    <div class="feature-card">
+      <div class="feature-icon">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 3L20 7.5L12 12L4 7.5L12 3Z" fill="rgba(1,48,36,0.1)" stroke="#013024" stroke-width="2"/>
+          <path d="M20 7.5V16.5L12 21L4 16.5V7.5" stroke="#013024" stroke-width="2" stroke-linecap="round"/>
+          <path d="M12 12V21" stroke="#013024" stroke-width="2"/>
+          <path d="M16 9.5L8 5.5" stroke="#013024" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="12" cy="3" r="1" fill="#00FFB9"/>
+          <circle cx="20" cy="7.5" r="1" fill="#00FFB9"/>
+          <circle cx="12" cy="12" r="1" fill="#00FFB9"/>
+          <circle cx="4" cy="7.5" r="1" fill="#00FFB9"/>
+        </svg>
+      </div>
+      <div class="feature-title">TRAINING</div>
+      <ul>
+        <li><b>Comprehensive courses:</b> Structured learning path</li>
+        <li><b>Hands-on practice:</b> Real-world exercises</li>
+        <li><b>Expert guidance:</b> Personalized mentoring</li>
+      </ul>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="4" y="4" width="16" height="16" rx="2" stroke="#013024" stroke-width="2" fill="rgba(1,48,36,0.1)"/>
+          <path d="M9 12l2 2 4-4" stroke="#013024" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="4" cy="4" r="1" fill="#00FFB9"/>
+          <circle cx="20" cy="4" r="1" fill="#00FFB9"/>
+          <circle cx="4" cy="20" r="1" fill="#00FFB9"/>
+          <circle cx="20" cy="20" r="1" fill="#00FFB9"/>
+        </svg>
+      </div>
+      <div class="feature-title">TEST</div>
+      <ul>
+        <li><b>Assess your knowledge</b> after every lesson</li>
+        <li><b>Get instant feedback</b></li>
+        <li><b>Retake quizzes</b> to achieve 100%</li>
+      </ul>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 3L20 7L12 11L4 7L12 3Z" fill="rgba(1,48,36,0.1)" stroke="#013024" stroke-width="2"/>
+          <path d="M4 7V17L12 21L20 17V7" stroke="#013024" stroke-width="2" stroke-linecap="round"/>
+          <path d="M12 11V21" stroke="#013024" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="12" cy="3" r="1" fill="#00FFB9"/>
+          <circle cx="20" cy="7" r="1" fill="#00FFB9"/>
+          <circle cx="12" cy="11" r="1" fill="#00FFB9"/>
+          <circle cx="4" cy="7" r="1" fill="#00FFB9"/>
+        </svg>
+      </div>
+      <div class="feature-title">PRACTICE</div>
+      <ul>
+        <li><b>Complete practice coding assignments</b></li>
+        <li><b>Submit pull requests on GitHub</b></li>
+        <li><b>Receive mentor feedback</b> through code reviews</li>
+      </ul>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 20h16" stroke="#013024" stroke-width="2" stroke-linecap="round"/>
+          <path d="M7 8v12" stroke="#013024" stroke-width="2" stroke-linecap="round" fill="rgba(1,48,36,0.1)"/>
+          <path d="M11 4v16" stroke="#013024" stroke-width="2" stroke-linecap="round"/>
+          <path d="M15 12v8" stroke="#013024" stroke-width="2" stroke-linecap="round"/>
+          <path d="M19 16v4" stroke="#013024" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="7" cy="8" r="1" fill="#00FFB9"/>
+          <circle cx="11" cy="4" r="1" fill="#00FFB9"/>
+          <circle cx="15" cy="12" r="1" fill="#00FFB9"/>
+          <circle cx="19" cy="16" r="1" fill="#00FFB9"/>
+        </svg>
+      </div>
+      <div class="feature-title">LEVEL UP</div>
+      <ul>
+        <li><b>Master new skills</b> with each lesson</li>
+        <li><b>Track your progress and improvement</b></li>
+        <li><b>Be ready for the next topic</b></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Courses Preview Section -->
+<section class="courses-preview">
+  <div class="courses-list center-content">
+    <h2 class="section-title">Our <span style="color: #013024;">Courses</span></h2>
+    <div class="courses-grid">
+      <!-- JavaScript Course -->
+      <div class="course-card">
+        <div class="course-image">
+          <img src="/assets/images/courses/playwright1.jpg" alt="Playwright Automation" />
+        </div>
+        <div class="course-content">
+          <h3>Playwright Automation</h3>
+          <p>🎓 Master Microsoft Playwright with JavaScript
+Perfect for beginners and experienced testers alike!
+🚀 Hands-on projects, real-world scenarios, and personalized mentorship every step of the way.
+Build automation skills that stand out!</p>
+          <a routerLink="/courses/javascript" class="enroll-btn">Enroll</a>
+        </div>
+      </div>
+
+      <!-- Playwright Course -->
+      <div class="course-card">
+        <div class="course-image">
+          <img src="/assets/images/courses/Java.jpg" alt="Java Development" />
+        </div>
+        <div class="course-content">
+          <h3>Java Development</h3>
+          <p>🚀 Master Java with Spring Boot!
+Build powerful enterprise apps using modern architecture & best practices — all through hands-on, project-based learning.
+👨‍💻 Perfect for developers aiming to level up their backend skills and land high-impact roles!</p>
+          <a routerLink="/courses/playwright-automation" class="enroll-btn">Enroll</a>
+        </div>
+      </div>
+
+      <!-- Java Development Course -->
+      <div class="course-card">
+        <div class="course-image">
+          <img src="/assets/images/courses/Security.jpg" alt="Security Testing" />
+        </div>
+        <div class="course-content">
+          <h3>Security Testing</h3>
+          <p>🔐 Secure your applications before attackers do! Identify vulnerabilities, safeguard data, and build trust with testing. 🛡️ Stay ahead with proactive defense and real-world attack simulations - perfect for anyone aiming to build strong, secure systems.</p>
+          <a routerLink="/courses/java-development" class="enroll-btn">Enroll</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.courses-preview {
+  padding: 4rem 0;
+  background: #FFFFF0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: #013024;
+}
+
+.accent {
+  color: #00FFB9;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.course-card {
+  background: #FFFFF0;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: all 0.4s ease;
+  border: 1px solid transparent;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(42, 245, 152, 0.3);
+  box-shadow: 0 12px 24px -6px rgba(0, 0, 0, 0.15);
+}
+
+.course-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(45deg, #013024 0%, #000 100%);
+  border-radius: 1rem 1rem 0 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(1, 48, 36, 0.9) 0%, rgba(0, 0, 0, 0.7) 100%);
+    z-index: 1;
+    opacity: 0.7;
+    transition: opacity 0.4s ease;
+  }
+
+  &:hover::before {
+    opacity: 0.5;
+  }
+}
+
+.course-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 0;
+  transform: scale(1);
+  transition: transform 0.4s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.course-content {
+  padding: 1.5rem;
+}
+
+.course-content h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #013024;
+  margin-bottom: 0.75rem;
+}
+
+.course-content p {
+  color: #64748b;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.enroll-btn {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background: #013024;
+  color: white;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.enroll-btn:hover {
+  background: #1d4ed8;
+}
+
+@media (max-width: 768px) {
+  .courses-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+}
+</style>
+
+<!-- Testimonials Section -->
+<section class="testimonials-section">
+  <div class="testimonials-list center-content">
+    <h2 class="testimonials-title"><span class="accent">Real People.</span><br/>Real Experiences.</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <img src="https://randomuser.me/api/portraits/women/1.jpg" alt="Viktroiia Colozzo" />
+        <div class="testimonial-name">Viktroiia Colozzo</div>
+        <div class="testimonial-linkedin"><a href="#">in</a></div>
+        <p>"I appreciate the <span class='highlight'>structured lessons and the assessments after each lesson</span>, which help gauge understanding. The explanations are detailed and clear, making it easier to grasp the material. All that's left for us, students, is to practice to strengthen our skills."</p>
+      </div>
+      <div class="testimonial-card">
+        <img src="https://randomuser.me/api/portraits/men/2.jpg" alt="Chris Bremmer" />
+        <div class="testimonial-name">Chris Bremmer</div>
+        <div class="testimonial-linkedin"><a href="#">in</a></div>
+        <p>"The utilization of <span class='highlight'>submitting code assignments for review along with the slack community for help really is something others don't offer</span> and really assisted in solidifying the knowledge. 10/10 recommend this course!"</p>
+      </div>
+      <div class="testimonial-card">
+        <img src="https://randomuser.me/api/portraits/women/3.jpg" alt="Yuliya Dzervanouskaya" />
+        <div class="testimonial-name">Yuliya Dzervanouskaya</div>
+        <div class="testimonial-linkedin"><a href="#">in</a></div>
+        <p>"What truly sets this course apart is the approach to teaching. <span class='highlight'>Gifted with a rare intuition, flawlessly detecting when students need direct solutions</span> or just a few 'breadcrumbs' of a hint to gently guide them toward finding answers on their own."</p>
+      </div>
+      <div class="testimonial-card">
+        <img src="https://randomuser.me/api/portraits/men/4.jpg" alt="Matthew Singler" />
+        <div class="testimonial-name">Matthew Singler</div>
+        <div class="testimonial-linkedin"><a href="#">in</a></div>
+  <p>"My experience with Zenetra Technology has been great. <span class='highlight'>The amount of direct support is amazing</span> and the course content is the best on the market today. Everything is easy to follow, learn from, and progress as a professional."</p>
+      </div>
+      <div class="testimonial-card">
+        <img src="https://randomuser.me/api/portraits/women/5.jpg" alt="Alena Yurchenko" />
+        <div class="testimonial-name">Alena Yurchenko</div>
+        <div class="testimonial-linkedin"><a href="#">in</a></div>
+        <p>"The first time I took one of the courses was the JavaScript course. I was impressed by how clear and concise the teaching style was. Even though JavaScript was new to me, I thoroughly enjoyed the learning process and was able to apply the knowledge at work right after completing the course."</p>
+      </div>
+      <div class="testimonial-card">
+        <img src="https://randomuser.me/api/portraits/men/6.jpg" alt="Brandon Cole" />
+        <div class="testimonial-name">Brandon Cole</div>
+        <div class="testimonial-linkedin"><a href="#">in</a></div>
+        <p>"An excellent instructor and mentor. Explains things in a way that simplifies advanced concepts, while providing personalized guidance. The lab work provided a way to practice what was just taught, directly."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+
+<section class="faq-section">
+  <div class="faq-list center-content">
+    <h2 class="faq-title">Frequently Asked <span class="accent">Questions</span></h2>
+    <div class="faq-grid-bondar">
+      <ng-container *ngFor="let r of faqs; let i = index" >
+        <div class="faq-row-bondar" *ngIf="i % 2 === 0">
+          <div class="faq-item-bondar" *ngIf="faqs[i]">
+            <button class="faq-question-bondar" (click)="toggleFaq(i)" [attr.aria-expanded]="openFaqIndex === i">
+              <span class="faq-qtext">{{ faqs[i].question }}</span>
+              <span class="faq-arrow-bondar" [class.open]="openFaqIndex === i">&#9660;</span>
+            </button>
+            <div class="faq-answer-bondar" *ngIf="openFaqIndex === i">
+              <div class="faq-answer-card">
+                {{ faqs[i].answer }}
+              </div>
+            </div>
+          </div>
+          <div class="faq-item-bondar" *ngIf="faqs[i+1]">
+            <button class="faq-question-bondar" (click)="toggleFaq(i+1)" [attr.aria-expanded]="openFaqIndex === i+1">
+              <span class="faq-qtext">{{ faqs[i+1].question }}</span>
+              <span class="faq-arrow-bondar" [class.open]="openFaqIndex === i+1">&#9660;</span>
+            </button>
+            <div class="faq-answer-bondar" *ngIf="openFaqIndex === i+1">
+              <div class="faq-answer-card">
+                {{ faqs[i+1].answer }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</section>
+
+
+<style>
+/* Styles for Home Page Screenshot Match */
+.center-content {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.hero {
+  background: linear-gradient(45deg, #000 0%, #013024 100%);
+  color: #FFFFF0;
+  padding: 4rem 0 3rem 0;
+}
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.hero-left {
+  flex: 1;
+}
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.hero-img {
+  border-radius: 12px;
+  width: 320px;
+  height: 320px;
+  object-fit: cover;
+  box-shadow: 0 2px 16px rgba(0,255,185,0.12);
+}
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #FFFFF0;
+}
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+}
+.intro-section {
+  background: #f7f9fb;
+  padding: 2rem 1rem;
+
+  @media (min-width: 768px) {
+    padding: 3rem 0 2rem 0;
+  }
+}
+
+.intro-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: stretch;
+  padding: 0 1rem;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    gap: 2rem;
+    align-items: flex-start;
+    padding: 0;
+  }
+}
+
+.intro-left {
+  flex: 1;
+
+  @media (min-width: 768px) {
+    flex: 2;
+  }
+}
+
+.intro-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #000;
+  line-height: 1.2;
+
+  @media (min-width: 768px) {
+    font-size: 2.7rem;
+  }
+}
+.intro-title .accent {
+  color: #013024;
+}
+.intro-desc {
+  font-size: 1.2rem;
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+.intro-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.blue-card {
+  background: #013024;
+  color: #FFFFF0;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,255,185,0.08);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+
+  @media (min-width: 768px) {
+    gap: 1rem;
+    padding: 1.2rem 1.5rem;
+    border-radius: 16px;
+  }
+}
+
+.blue-card-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+
+  @media (min-width: 768px) {
+    font-size: 2rem;
+  }
+}
+
+.blue-card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.2;
+
+  @media (min-width: 768px) {
+    font-size: 1.1rem;
+  }
+
+  .accent {
+    color: #ffd700;
+  }
+}
+
+.blue-card-desc {
+  font-size: 0.85rem;
+  color: #e0e7ff;
+  line-height: 1.3;
+
+  @media (min-width: 768px) {
+    font-size: 0.95rem;
+  }
+}
+.features-section {
+  background: #f7f9fb;
+  padding: 2rem 0 3rem 0;
+}
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+  padding: 0 1rem;
+
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+}
+
+.feature-card {
+  background: #FFFFF0;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(37,99,235,0.08);
+  padding: 1.5rem;
+  text-align: left;
+  width: 100%;
+  transition: all 0.4s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    border: 1px solid rgba(42, 245, 152, 0.3);
+    box-shadow: 0 8px 20px rgba(37,99,235,0.15);
+  }
+}
+.feature-icon {
+  background: rgba(1, 48, 36, 0.05);
+  border-radius: 12px;
+  width: 3.5rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  svg {
+    width: 32px;
+    height: 32px;
+  }
+}
+.feature-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+  color: #222;
+
+  @media (min-width: 768px) {
+    font-size: 1.2rem;
+  }
+}
+
+.feature-card ul {
+  padding-left: 1.2rem;
+  margin: 0;
+}
+
+.feature-card li {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: #222;
+  line-height: 1.4;
+
+  @media (min-width: 768px) {
+    font-size: 1rem;
+  }
+}
+.courses-preview {
+  background: #f7f9fb;
+  padding: 3rem 0;
+}
+.courses-list {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: none;
+}
+.courses-title {
+  text-align: center;
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #013024;
+  margin-bottom: 2.5rem;
+}
+.course-row {
+  display: flex;
+  align-items: center;
+  background: #f5f8fa;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(37,99,235,0.08);
+  margin-bottom: 2rem;
+  padding: 2rem 2.5rem;
+  gap: 2rem;
+}
+.course-img img {
+  width: 320px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.course-info {
+  flex: 1;
+}
+.course-info h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+  color: #222;
+}
+.course-info p {
+  font-size: 1.1rem;
+  color: #444;
+}
+.course-action {
+  display: flex;
+  align-items: center;
+}
+.enroll-btn {
+  font-size: 1.1rem;
+  padding: 0.7rem 2.2rem;
+  border-radius: 8px;
+  border: 2px solid #2AF598;
+  color: #2AF598;
+  background: #FFFFF0;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s;
+  cursor: pointer;
+}
+.enroll-btn:hover {
+  background: #2AF598;
+  color: #FFFFF0;
+}
+.testimonials-section {
+  background: #181818;
+  color: #FFFFF0;
+  padding: 4rem 0 3rem 0;
+}
+.testimonials-list {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.testimonials-title {
+  text-align: center;
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  color: #FFFFF0;
+}
+.testimonials-title .accent {
+  color: #013024;
+}
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem 2rem;
+}
+.testimonial-card {
+  background: transparent;
+  border-radius: 18px;
+  text-align: left;
+  padding: 0;
+  color: #FFFFF0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.testimonial-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+.testimonial-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+.testimonial-linkedin a {
+  color: #013024;
+  font-weight: 700;
+  text-decoration: none;
+  margin-bottom: 0.7rem;
+  display: inline-block;
+}
+.testimonial-card p {
+  font-size: 1.05rem;
+  color: #e0e0e0;
+  margin-top: 0.7rem;
+}
+.highlight {
+  background: #00FFB9;
+  color: #FFFFF0;
+  padding: 0.1em 0.3em;
+  border-radius: 4px;
+}
+.faq-section {
+  background: #FFFFF0;
+  padding: 3rem 0 0 0;
+  border-radius: 4px;
+  margin-bottom: 0.7rem;
+}
+.faq-list {
+  max-width: 1100px;
+  margin: 0 auto;
+  margin-bottom: 0.7rem;
+}
+.faq-title {
+  text-align: center;
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  color: #181818;
+}
+.faq-title .accent {
+  color: #013024;
+}
+.faq-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem 2rem;
+  margin-bottom: 1%;
+    margin-top: 1%;
+}
+.faq-item {
+  background: transparent;
+  border-radius: 18px;
+  text-align: left;
+  padding: 0;
+  color: #181818;
+  font-weight: 700;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.7rem;
+}
+.faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 0.7rem;
+}
+.faq-arrow {
+  font-size: 1.3rem;
+  color: #222;
+  margin-left: 0.5em;
+}
+.hero-slider-flipkart {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  min-height: 220px;
+}
+.hero-slide-flipkart {
+  flex: 1 0 100%;
+  display: none;
+  transition: opacity 0.5s;
+  align-items: stretch;
+  min-width: 0;
+  min-height: 0;
+  position: relative;
+  z-index: 0;
+}
+.hero-slide-flipkart.active {
+  display: flex;
+  opacity: 1;
+}
+.hero-slide-content-flipkart {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+.hero-img-flipkart {
+  width: 320px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(37,117,252,0.12);
+}
+</style>
