@@ -213,7 +213,7 @@ import { Component } from '@angular/core';
 
     /* Hero Section */
     .hero-section {
-      background: linear-gradient(135deg, #013024 0%, #025c46 100%);
+      background: #001a12;
       color: white;
       padding: 5rem 0;
       text-align: center;
@@ -289,7 +289,7 @@ import { Component } from '@angular/core';
       display: flex;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(135deg, #013024 0%, #025c46 100%);
+      background: #001a12;
       border-radius: 50%;
       color: #2AF598;
     }
@@ -385,7 +385,7 @@ import { Component } from '@angular/core';
     }
 
     .workshop-date {
-      background: linear-gradient(135deg, #013024 0%, #025c46 100%);
+      background: #001a12;
       color: white;
       padding: 1rem;
       text-align: center;
