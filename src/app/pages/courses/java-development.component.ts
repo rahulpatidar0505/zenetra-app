@@ -8,4 +8,10 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule]
 })
-export class JavaDevelopmentComponent {}
+export class JavaDevelopmentComponent {
+  activeModule: string | null = null;
+
+  toggleModule(moduleId: string) {
+    this.activeModule = this.activeModule === moduleId ? null : moduleId;
+  }
+}

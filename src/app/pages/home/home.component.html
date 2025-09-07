@@ -141,48 +141,73 @@
 
 <!-- Courses Preview Section -->
 <section class="courses-preview">
-  <div class="courses-list center-content">
-    <h2 class="section-title">Our <span style="color: #013024;">Courses</span></h2>
-    <div class="courses-grid">
-      <!-- JavaScript Course -->
+  <div class="container">
+    <h2 class="section-title" style="text-align: center; margin-bottom: 3rem;">Our <span style="color: #013024;">Courses</span></h2>
+    <div class="course-cards">
+      <!-- Playwright Automation Course -->
       <div class="course-card">
-        <div class="course-image">
-          <img src="/assets/images/courses/playwright.jpg" alt="Playwright Automation" />
-        </div>
-        <div class="course-content">
+        <div class="course-header">
+          <div class="course-icon">
+            <img src="/assets/images/courses/playwright.jpg" alt="Playwright Automation" class="course-img"/>
+          </div>
           <h3>Playwright Automation</h3>
-          <p>🎓 Master Microsoft Playwright with JavaScript
-Perfect for beginners and experienced testers alike!
-🚀 Hands-on projects, real-world scenarios, and personalized mentorship every step of the way.
-Build automation skills that stand out!</p>
-          <a routerLink="/courses/playwright-automation" class="enroll-btn">Enroll</a>
         </div>
-      </div>
-
-      <!-- Playwright Course -->
-      <div class="course-card">
-        <div class="course-image">
-          <img src="/assets/images/courses/Java.jpg" alt="Java Development" />
+        <div class="course-description">
+          <p>
+            🎓 Master Microsoft Playwright with JavaScript Perfect for beginners and experienced testers alike!
+          </p>
+          <p>
+            🚀 Hands-on projects, real-world scenarios, and personalized mentorship every step of the way.
+          </p>
+          <p>
+            💪 Build automation skills that stand out!
+          </p>
         </div>
-        <div class="course-content">
-          <h3>Java Development</h3>
-          <p>🚀 Master Java with Spring Boot!
-Build powerful enterprise apps using modern architecture & best practices — all through hands-on, project-based learning.
-👨‍💻 Perfect for developers aiming to level up their backend skills and land high-impact roles!</p>
-          <a routerLink="/courses/java-development" class="enroll-btn">Enroll</a>
-        </div>
+        <a routerLink="/courses/playwright-automation" class="btn-primary">Explore Course →</a>
       </div>
 
       <!-- Java Development Course -->
       <div class="course-card">
-        <div class="course-image">
-          <img src="/assets/images/courses/Security.jpg" alt="Security Testing" />
+        <div class="course-header">
+          <div class="course-icon">
+            <img src="/assets/images/courses/Java.jpg" alt="Java Development" class="course-img"/>
+          </div>
+          <h3>Java Development</h3>
         </div>
-        <div class="course-content">
+        <div class="course-description">
+          <p>
+            � Master Java with Spring Boot! Build powerful enterprise apps using modern architecture & best practices.
+          </p>
+          <p>
+            🎯 All through hands-on, project-based learning.
+          </p>
+          <p>
+            👨‍💻 Perfect for developers aiming to level up their backend skills and land high-impact roles!
+          </p>
+        </div>
+        <a routerLink="/courses/java-development" class="btn-primary">Explore Course →</a>
+      </div>
+
+      <!-- Security Testing Course -->
+      <div class="course-card">
+        <div class="course-header">
+          <div class="course-icon">
+            <img src="/assets/images/courses/Security.jpg" alt="Security Testing" class="course-img"/>
+          </div>
           <h3>Security Testing</h3>
-          <p>🔐 Secure your applications before attackers do! Identify vulnerabilities, safeguard data, and build trust with testing. 🛡️ Stay ahead with proactive defense and real-world attack simulations - perfect for anyone aiming to build strong, secure systems.</p>
-          <a routerLink="/courses/security-testing" class="enroll-btn">Enroll</a>
         </div>
+        <div class="course-description">
+          <p>
+            🔐 Secure your applications before attackers do! Identify vulnerabilities and safeguard data.
+          </p>
+          <p>
+            🛡️ Stay ahead with proactive defense and real-world attack simulations.
+          </p>
+          <p>
+            🎯 Perfect for anyone aiming to build strong, secure systems.
+          </p>
+        </div>
+        <a routerLink="/courses/security-testing" class="btn-primary">Explore Course →</a>
       </div>
     </div>
   </div>
@@ -191,113 +216,114 @@ Build powerful enterprise apps using modern architecture & best practices — al
 <style>
 .courses-preview {
   padding: 4rem 0;
-  background: #FFFFF0;
+  background: #f8f9fa;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .section-title {
   text-align: center;
   font-size: 2.5rem;
   font-weight: 700;
+  color: #1a1a1a;
   margin-bottom: 3rem;
-  color: #013024;
 }
 
-.accent {
-  color: #00FFB9;
-}
-
-.courses-grid {
+.course-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-  padding: 0 1rem;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .course-card {
   background: #FFFFF0;
-  border-radius: 1rem;
-  overflow: hidden;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border-radius: 12px;
+  padding: 2rem;
   transition: all 0.4s ease;
   border: 1px solid transparent;
-}
-
-.course-card:hover {
-  transform: translateY(-5px);
-  border-color: rgba(42, 245, 152, 0.3);
-  box-shadow: 0 12px 24px -6px rgba(0, 0, 0, 0.15);
-}
-
-.course-image {
-  width: 100%;
-  height: 200px;
-  overflow: hidden;
-  position: relative;
-  background: linear-gradient(45deg, #013024 0%, #000 100%);
-  border-radius: 1rem 1rem 0 0;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(45deg, rgba(1, 48, 36, 0.9) 0%, rgba(0, 0, 0, 0.7) 100%);
-    z-index: 1;
-    opacity: 0.7;
-    transition: opacity 0.4s ease;
-  }
-
-  &:hover::before {
-    opacity: 0.5;
-  }
-}
-
-.course-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: relative;
-  z-index: 0;
-  transform: scale(1);
-  transition: transform 0.4s ease;
+  display: flex;
+  flex-direction: column;
 
   &:hover {
-    transform: scale(1.05);
+    transform: translateY(-5px);
+    border-color: rgba(42, 245, 152, 0.3);
+    box-shadow: 0 12px 40px rgba(42, 245, 152, 0.15);
   }
-}
 
-.course-content {
-  padding: 1.5rem;
-}
+  .course-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
 
-.course-content h3 {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #013024;
-  margin-bottom: 0.75rem;
-}
+    .course-icon {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 1rem;
+      border-radius: 50%;
+      overflow: hidden;
+      background: linear-gradient(135deg, #1e3f60 0%, #0a192f 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-.course-content p {
-  color: #64748b;
-  margin-bottom: 1.5rem;
-  line-height: 1.5;
-}
+    .course-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-.enroll-btn {
-  display: inline-block;
-  padding: 0.75rem 2rem;
-  background: #013024;
-  color: white;
-  border-radius: 0.5rem;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background-color 0.2s ease-in-out;
-}
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin: 1rem 0;
+    }
+  }
 
-.enroll-btn:hover {
-  background: #1d4ed8;
+  .course-description {
+    flex-grow: 1;
+    margin-bottom: 1.5rem;
+
+    p {
+      font-size: 1rem;
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .btn-primary {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    background: #2AF598;
+    color: #0a192f;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.4s ease;
+    margin-top: auto;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(42, 245, 152, 0.3);
+      background: #1ce589;
+    }
+  }
 }
 
 @media (max-width: 768px) {
