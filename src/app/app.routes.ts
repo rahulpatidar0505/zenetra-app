@@ -21,9 +21,14 @@ export const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'courses', component: CoursesComponent },
-  { path: 'courses/playwright-automation', component: PlaywrightAutomationComponent },
-  { path: 'courses/java-development', component: JavaDevelopmentComponent },
-  { path: 'courses/security-testing', component: SecurityTestingComponent },
+  { 
+    path: 'courses', 
+    children: [
+      { path: 'playwright-automation', component: PlaywrightAutomationComponent },
+      { path: 'java-development', component: JavaDevelopmentComponent },
+      { path: 'security-testing', component: SecurityTestingComponent }
+    ]
+  },
   { path: 'admissions', component: AdmissionsComponent },
   { path: 'gallery', component: GalleryComponent },
   { path: 'services', component: ServicesComponent },

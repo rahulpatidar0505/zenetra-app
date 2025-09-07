@@ -13,6 +13,16 @@ export class AppComponent {
   isMobileMenuOpen = false;
   activeDropdown: string | null = null;
 
+  isTrainingRoute(): boolean {
+    const path = window.location.pathname;
+    return path.includes('/courses');
+  }
+
+  isServicesRoute(): boolean {
+    const path = window.location.pathname;
+    return path.includes('/services');
+  }
+
   toggleMobileMenu() {
     this.isMobileMenuOpen = !this.isMobileMenuOpen;
     if (!this.isMobileMenuOpen) {

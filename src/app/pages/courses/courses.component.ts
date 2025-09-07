@@ -12,25 +12,25 @@ import { RouterModule } from '@angular/router';
 export class CoursesComponent {
   courses = [
     {
-      id: 'playwright',
+      id: 'playwright-automation',
       title: 'Playwright Automation',
-      image: '/assets/images/courses/playwright1.jpg',
-      description: 'Microsoft Playwright with TypeScript course. Created for both beginners and experienced learners. Personalized mentorship throughout the class.',
-      link: '/courses/playwright-automation'
+      description: '🎭 Master Microsoft Playwright with JavaScript Perfect for beginners and experienced testers alike! 💕 Hands-on projects, real-world scenarios, and personalized mentorship every step of the way. Build automation',
+      image: '/assets/images/courses/playwright.jpg',
+      route: '/courses/playwright-automation'
     },
     {
-      id: 'java',
+      id: 'java-development',
       title: 'Java Development',
+      description: '💝 Master Java with Spring Boot! Build powerful enterprise apps using modern architecture & best practices — all through hands-on, project-based learning. 👨‍💻 Perfect for developers aiming to level up their backend skills and land high-impact roles!',
       image: '/assets/images/courses/Java.jpg',
-      description: 'Master Java development with Spring Boot. Build enterprise applications with modern architecture patterns and best practices.',
-      link: '/courses/java-development'
+      route: '/courses/java-development'
     },
     {
-      id: 'security',
+      id: 'security-testing',
       title: 'Security Testing',
+      description: '🔐 Secure your applications before attackers do! Identify vulnerabilities, safeguard data, and build trust with testing. 🛡️ Stay ahead with proactive defense and real-world attack simulations - perfect for anyone aiming to build strong, secure systems.',
       image: '/assets/images/courses/Security.jpg',
-      description: 'Introduction to JavaScript for the very beginners. Write your first code, understand the core programming concepts, assess your knowledge.',
-      link: '/courses/java-development'
+      route: '/courses/security-testing'
     }
   ];
 }
